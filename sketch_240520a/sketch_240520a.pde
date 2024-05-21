@@ -19,19 +19,27 @@ void setup(){
 
 void draw(){
   background (0);
-  println (frameCount/60);
+  println (frameCount/52);
   if ( twister .equals ( "pantalla1")){
     image (foto1,0,0);
     fill (0);
     text (" TWISTER juego de maximo 4 personas", 320, 240);
   }
-  if (frameCount/60>=15) {
+  if (frameCount/52>=5) {
      twister= "pantalla2";
   }
   if (twister .equals ("pantalla2")){
     image (foto2, 0, 0);
     fill (0);
-    text ("twister tiene un rulet la cual al girar te indica con q parte del cuerpo tenes q tocar un color", 320, 240);
+    text (" Este juego tiene una ruleta \n la cual al girar te indica con q \n parte del cuerpo tenes q tocar un color", 320, 240); 
   }
+  if (frameCount/52>10){
+    twister= "pantalla3";
+ }
+ if (twister .equals ("pantalla3")){
+   image (foto3, 0, 0);
+   fill (0);
+   text ("No te caigas \n o perderas!!", 320, 240);
+ }
   
 }
